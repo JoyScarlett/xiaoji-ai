@@ -40,9 +40,10 @@ body {
     padding: 20px 40px;
     margin-bottom: 20px;
     border: none;
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    background: #0a0e27;
     border-radius: 12px;
     pointer-events: none; /* Logo不可点击 */
+    position: relative;
 }
 
 /* Logo图片 */
@@ -53,8 +54,8 @@ body {
     transition: opacity 0.2s ease;
     border: none;
     outline: none;
-    filter: brightness(1.1) contrast(0.95) hue-rotate(180deg) saturate(0.3);
-    mix-blend-mode: screen;
+    position: relative;
+    z-index: 1;
 }
 
 /* 移动端适配 */
