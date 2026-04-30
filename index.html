@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小鸡说AI - 小红书全自动获客神器">
+    <title>小鸡说AI - 小红书全自动获客神器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 标题区 -->
+    <header class="header-section">
+        <div class="container">
+            <div class="brand-logo">
+                <img 
+                    src="logo.png" 
+                    alt="小鸡说AI" 
+                    class="brand-logo-img"
+                    width="340"
+                    height="auto"
+                >
+            </div>
+            <p class="logo-tagline">
+                你的同行，正在用 AI 偷偷<br>
+                「偷走」你的客戶！
+            </p>
+            
+            <!-- 营销文案框 -->
+            <div class="marketing-box">
+                <p>當你還在為了一條文案抓耳撓腮<br>為了一條短片熬夜剪輯修圖時...</p>
+                <p>你的同行早就跟我 <strong>[自動獲客機]</strong> 模式</p>
+            </div>
+            
+            <!-- 第二段文案 -->
+            <div class="marketing-text">
+                <p>他們正在 <strong>【小雞AI】</strong> 一鍵完成全網的獲客基因<br>每天全自動生成圖文和短片<br>幾十個矩陣帳號在各大平台瘋狂輸量</p>
+            </div>
+            
+            <!-- 功能展示图片 -->
+            <div class="feature-images">
+                <img src="feature-1.png" alt="创作中心" class="feature-img" onclick="toggleImageExpand(this)">
+                <img src="feature-2.png" alt="平台选择" class="feature-img" onclick="toggleImageExpand(this)">
+            </div>
+            
+            <!-- CTA按钮区域 -->
+            <div class="cta-buttons-wrapper">
+                <!-- 限时体验标签 -->
+                <div class="limited-time-badge">限時體驗</div>
+                
+                <h2 class="cta-main-title">老闆們別再親自熬夜寫文案了，<br>把引流交給 AI</h2>
+                <p class="cta-sub-title">30秒生成原創爆款圖文短片，防封號技術護航，小白也能輕鬆上手</p>
+                
+                <!-- 信息提示框 -->
+                <div class="cta-info-box">
+                    <p>點擊下方按鈕添加客服，領取</p>
+                    <p class="highlight-text">AI 自動獲客免費體驗名額</p>
+                </div>
+                
+                <!-- 按钮组 -->
+                <div class="cta-buttons">
+                    <button class="cta-btn ripple-btn wechat-btn" data-button="wechat">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">點擊此處添加微信</span>
+                    </button>
+                    <button class="cta-btn ripple-btn whatsapp-btn" data-button="whatsapp" onclick="openWhatsApp()">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">點擊添加 WhatsApp</span>
+                    </button>
+                    <a href="https://line.me/R/ti/p/4WEARmLePe" target="_blank" class="cta-btn ripple-btn line-btn" data-button="line">
+                        <span class="btn-icon">💚</span>
+                        <span class="btn-text">點擊添加 LINE</span>
+                    </a>
+                </div>
+                
+                <!-- 底部提示 -->
+                <div class="cta-footer-note">
+                    名額有限，先到先得，立即體驗 AI 降維打擊
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 为什么选择小鸡说AI -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">為什麼選擇小雞說AI？</h2>
+            <p class="section-subtitle">告别传统获客玄学，一部手机打造自动化流量矩阵</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card glass-effect scroll-animate">
+                    <h3>📱 手机即终端</h3>
+                    <p>告别繁琐的电脑操作，一部手机就能随时随地完成小红书矩阵运营，让碎片化时间变现。</p>
+                </div>
+                
+                <div class="feature-card glass-effect scroll-animate scroll-animate-delay-1">
+                    <h3>🎯 爆款不靠运</h3>
+                    <p>拒绝盲目原创。输入同行链接，AI智能拆解爆款基因并提炼密码，30秒为你生成专属高转化图文。</p>
+                </div>
+                
+                <div class="feature-card glass-effect scroll-animate scroll-animate-delay-2">
+                    <h3>🎨 AI智能生图/出片</h3>
+                    <p>不会P图剪辑？一句文案秒出精美配图，更支持一键提取商品链接，自动生成带货大片。</p>
+                </div>
+                
+                <div class="feature-card glass-effect scroll-animate scroll-animate-delay-3">
+                    <h3>🛡️ 深度去重防封号</h3>
+                    <p>独家AI底层逻辑重构，规避平台低级洗稿查重风险。保护你的矩阵账号资产，存活率大幅提升。</p>
+                </div>
+                
+                <div class="feature-card glass-effect scroll-animate scroll-animate-delay-4">
+                    <h3>✨ 0基础新手友好</h3>
+                    <p>傻瓜式操作，打开即用。不强求文笔，不必懂排版，让AI成为你24小时全天候的免费运营助理。</p>
+                </div>
+                
+                <div class="feature-card glass-effect scroll-animate scroll-animate-delay-5">
+                    <h3>🎓 保姆级陪跑服务</h3>
+                    <p>不仅卖工具，更教你怎么赚钱。内置10节0-1实战运营课程，更有专属社群答疑与大咖直播赋能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能矩阵 -->
+    <section class="functions-section">
+        <div class="container">
+            <h2 class="section-title">核心功能矩阵</h2>
+            <p class="section-subtitle">从爆款灵感、AI 自动创作、矩阵铺量到防封号处理，打造全链路获客闭环</p>
+            
+            <div class="function-grid">
+                <div class="function-card glass-effect scroll-animate">
+                    <h3>💡 灵感引擎</h3>
+                    <p>一键搜索全网各行业爆款笔记，自动提炼爆款内容与图片，彻底告别灵感枯竭。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-1">
+                    <h3>🔥 一键爆款克隆</h3>
+                    <p>复制同行爆款链接，AI 智能分析标题、框架与关键词，一键生成高转化原创内容。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-2">
+                    <h3>🎨 AI 智能生图</h3>
+                    <p>不会 P 图也能做爆款。只需一句文案，AI 模型自动为你生成多张高清原创配图。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-3">
+                    <h3>📸 拍照种草专家</h3>
+                    <p>有产品就能卖。手机拍照上传产品图，AI 自动提取卖点，极速生成种草海报与文案。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-4">
+                    <h3>🎬 爆款视频工厂</h3>
+                    <p>无需拍摄剪辑，只需粘贴商品链接，AI 提取卖点并在 10 秒内产出高质感带货短视频。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate">
+                    <h3>🛡️ 深度防封处理</h3>
+                    <p>采用独家 AI 源创与深度去重技术，规避平台违规风险，保护你的矩阵账号安全。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-1">
+                    <h3>🚀 全自动矩阵支持</h3>
+                    <p>打破 2 天 1 篇笔记的低效，极简发布流程让你 1 分钟发百号，真正实现量大出奇迹。</p>
+                </div>
+                
+                <div class="function-card glass-effect scroll-animate scroll-animate-delay-2">
+                    <h3>📚 内嵌实战课程</h3>
+                    <p>工具内置从小红书 0-1 获客教学到最新防封技巧，不仅给工具，更教你运营思路。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 小雞說AI | 讓小紅書獲客更簡單</p>
+    </footer>
+
+    <!-- 水波纹效果容器 -->
+    <div class="ripple-container"></div>
+
+    <!-- 动画效果 -->
+    <script src="animations.js"></script>
+    
+    <!-- 追踪脚本 -->
+    <script src="config.js"></script>
+    <script src="tracker.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- 图片和WhatsApp功能 -->
+    <script>
+        // WhatsApp跳转函数 - 隐藏号码
+        function openWhatsApp() {
+            const phone = atob('ODYxOTg2NTg4NzQwNA==');
+            window.open('https://wa.me/' + phone, '_blank');
+        }
+        
+        // 切换图片展开/收起
+        function toggleImageExpand(img) {
+            if (img.classList.contains('expanded')) {
+                img.classList.remove('expanded');
+            } else {
+                document.querySelectorAll('.feature-img').forEach(function(item) {
+                    item.classList.remove('expanded');
+                });
+                img.classList.add('expanded');
+            }
+        }
+        
+        // 移动端触摸支持
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.feature-img');
+            images.forEach(function(img) {
+                img.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    toggleImageExpand(this);
+                });
+            });
+        });
+    </script>
+    
+    <!-- 初始化动画 -->
+    <script>
+        if (typeof AnimationController !== 'undefined') {
+            const animationController = new AnimationController({
+                debug: false
+            });
+            animationController.initScrollAnimations();
+            animationController.initRippleEffect();
+        }
+    </script>
+</body>
+</html>
