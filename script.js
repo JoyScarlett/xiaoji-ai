@@ -34,23 +34,20 @@ body {
 
 /* Logo容器 */
 .brand-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
     padding: 0;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
     border: none;
     background: transparent;
     pointer-events: none; /* Logo不可点击 */
-    width: 100%;
 }
 
 /* Logo图片 */
 .brand-logo-img {
     display: block;
-    max-width: 540px;
-    width: 100%;
+    max-width: 450px;
     height: auto;
     transition: opacity 0.2s ease;
     border: none;
@@ -60,7 +57,7 @@ body {
 /* 移动端适配 */
 @media (max-width: 767px) {
     .brand-logo-img {
-        max-width: 360px;
+        max-width: 300px;
     }
     
     .brand-logo {
