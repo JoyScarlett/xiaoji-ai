@@ -37,10 +37,11 @@ body {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    padding: 0;
+    padding: 20px 40px;
     margin-bottom: 20px;
     border: none;
-    background: transparent;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    border-radius: 12px;
     pointer-events: none; /* Logo不可点击 */
 }
 
@@ -52,8 +53,8 @@ body {
     transition: opacity 0.2s ease;
     border: none;
     outline: none;
-    filter: brightness(1.1) contrast(0.95);
-    mix-blend-mode: lighten;
+    filter: brightness(1.1) contrast(0.95) hue-rotate(180deg) saturate(0.3);
+    mix-blend-mode: screen;
 }
 
 /* 移动端适配 */
@@ -63,7 +64,7 @@ body {
     }
     
     .brand-logo {
-        padding: 0;
+        padding: 15px 30px;
     }
 }
 
