@@ -37,13 +37,11 @@ body {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    padding: 20px 40px;
+    padding: 0;
     margin-bottom: 20px;
     border: none;
-    background: #0a0e27;
-    border-radius: 12px;
+    background: transparent;
     pointer-events: none; /* Logo不可点击 */
-    position: relative;
 }
 
 /* Logo图片 */
@@ -54,8 +52,6 @@ body {
     transition: opacity 0.2s ease;
     border: none;
     outline: none;
-    position: relative;
-    z-index: 1;
 }
 
 /* 移动端适配 */
@@ -65,7 +61,7 @@ body {
     }
     
     .brand-logo {
-        padding: 15px 30px;
+        padding: 0;
     }
 }
 
