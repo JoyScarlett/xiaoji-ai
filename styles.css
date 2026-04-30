@@ -37,16 +37,17 @@ body {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 0;
     margin-bottom: 20px;
     border: none;
+    background: transparent;
     pointer-events: none; /* Logo不可点击 */
 }
 
 /* Logo图片 */
 .brand-logo-img {
     display: block;
-    max-width: 340px;
+    max-width: 380px;
     height: auto;
     transition: opacity 0.2s ease;
     border: none;
@@ -58,11 +59,11 @@ body {
 /* 移动端适配 */
 @media (max-width: 767px) {
     .brand-logo-img {
-        max-width: 220px;
+        max-width: 250px;
     }
     
     .brand-logo {
-        padding: 8px 16px;
+        padding: 0;
     }
 }
 
