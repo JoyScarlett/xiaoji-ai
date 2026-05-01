@@ -50,6 +50,7 @@ body {
     width: 100%;
     border: none;
     pointer-events: none; /* Logo不可点击 */
+    text-align: center;
 }
 
 /* Logo图片 */
@@ -57,6 +58,7 @@ body {
     display: block;
     max-width: 340px;
     height: auto;
+    margin: 0 auto;
     transition: opacity 0.2s ease;
     border: none;
     outline: none;
@@ -68,6 +70,7 @@ body {
 @media (max-width: 767px) {
     .brand-logo-img {
         max-width: 280px;
+        margin: 0 auto;
     }
     
     .brand-logo {
@@ -75,6 +78,7 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
+        text-align: center;
     }
 }
 
