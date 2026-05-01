@@ -1,0 +1,221 @@
+/* WhatsApp 聊天窗口样式 */
+
+/* 聊天窗口容器 */
+.whatsapp-chat-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-width: 90vw;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+}
+
+.whatsapp-chat-popup.active {
+    display: flex;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 聊天窗口头部 */
+.whatsapp-chat-header {
+    background: #075e54;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.whatsapp-chat-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.whatsapp-chat-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.whatsapp-chat-info p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.whatsapp-chat-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 聊天内容区 */
+.whatsapp-chat-body {
+    background: #e5ddd5;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23e5ddd5" width="100" height="100"/><path d="M0 0L100 100M100 0L0 100" stroke="%23d1ccc0" stroke-width="0.5" opacity="0.1"/></svg>');
+    padding: 16px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 聊天气泡 */
+.whatsapp-message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    animation: messageIn 0.3s ease-out;
+}
+
+@keyframes messageIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 接收的消息（左侧） */
+.whatsapp-message.received {
+    background: #fff;
+    align-self: flex-start;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 发送的消息（右侧） */
+.whatsapp-message.sent {
+    background: #dcf8c6;
+    align-self: flex-end;
+    border-radius: 8px 0 8px 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-message-time {
+    font-size: 11px;
+    color: #667781;
+    margin-top: 4px;
+    text-align: right;
+}
+
+/* 输入区域 */
+.whatsapp-chat-footer {
+    background: #f0f0f0;
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.whatsapp-chat-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 24px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.whatsapp-chat-send {
+    background: #25d366;
+    border: none;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-chat-send:hover {
+    background: #128c7e;
+    transform: scale(1.05);
+}
+
+/* 浮动按钮 */
+.whatsapp-float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 9998;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float-button svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+/* 移动端适配 */
+@media (max-width: 767px) {
+    .whatsapp-chat-popup {
+        width: 100%;
+        max-width: 100vw;
+        bottom: 0;
+        right: 0;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .whatsapp-float-button {
+        bottom: 80px;
+    }
+}
