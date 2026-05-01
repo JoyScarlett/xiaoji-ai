@@ -72,7 +72,7 @@ body {
         max-width: 350px;
         margin: 0 auto;
         display: block;
-        transform: translate(100px, 0);
+        transform: translate(50px, -70px);
     }
     
     .brand-logo {
@@ -80,6 +80,7 @@ body {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
+        margin-bottom: -50px;
         display: flex;
         justify-content: center;
         text-align: center;
