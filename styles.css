@@ -69,9 +69,10 @@ body {
 /* 移动端适配 */
 @media (max-width: 767px) {
     .brand-logo-img {
-        max-width: 320px;
+        max-width: 350px;
         margin: 0 auto;
         display: block;
+        transform: translateX(100px);
     }
     
     .brand-logo {
