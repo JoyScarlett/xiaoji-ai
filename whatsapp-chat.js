@@ -83,10 +83,19 @@ class WhatsAppChat {
             floatBtn.style.display = 'flex';
         });
 
-        // 点击输入框或发送按钮，跳转到 WhatsApp
+        // 点击输入框或发送按钮，直接跳转到 WhatsApp
         const openWhatsApp = () => {
             const message = encodeURIComponent('你好，我對小雞說AI感興趣！');
-            window.open(`https://wa.me/${this.phoneNumber}?text=${message}`, '_blank');
+            // 使用 whatsapp:// 协议，在移动端直接打开 WhatsApp 应用
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // 移动端：直接使用 whatsapp:// 协议
+                window.location.href = `whatsapp://send?phone=${this.phoneNumber}&text=${message}`;
+            } else {
+                // 桌面端：使用 web.whatsapp.com
+                window.open(`https://web.whatsapp.com/send?phone=${this.phoneNumber}&text=${message}`, '_blank');
+            }
         };
 
         input.addEventListener('click', openWhatsApp);
