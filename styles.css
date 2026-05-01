@@ -41,11 +41,12 @@ body {
 
 /* Logo容器 */
 .brand-logo {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    padding: 8px 16px;
-    margin-bottom: 20px;
+    padding: 0;
+    margin: 0 auto 20px;
     border: none;
     pointer-events: none; /* Logo不可点击 */
 }
@@ -69,7 +70,7 @@ body {
     }
     
     .brand-logo {
-        padding: 8px 16px;
+        padding: 0;
     }
 }
 
