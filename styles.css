@@ -69,16 +69,23 @@ body {
 /* 移动端适配 */
 @media (max-width: 767px) {
     .brand-logo-img {
-        max-width: 280px;
+        max-width: 320px;
         margin: 0 auto;
+        display: block;
     }
     
     .brand-logo {
         padding: 0;
-        width: 100%;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+    
+    .header-section {
+        padding: 60px 0 40px;
     }
 }
 
