@@ -189,10 +189,25 @@
     
     <!-- 图片和WhatsApp功能 -->
     <script>
-        // WhatsApp跳转函数 - 隐藏号码
+        // WhatsApp跳转函数 - 直接打开聊天界面
         function openWhatsApp() {
             const phone = atob('ODYxOTg2NTg4NzQwNA==');
-            window.open('https://wa.me/+' + phone, '_blank');
+            
+            // 检测是否为移动设备
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // 移动端：优先使用 whatsapp:// 协议直接唤起应用
+                window.location.href = 'whatsapp://send?phone=' + phone;
+                
+                // 备用方案：如果3秒内没有打开应用，则使用网页版
+                setTimeout(function() {
+                    window.location.href = 'https://api.whatsapp.com/send?phone=' + phone;
+                }, 3000);
+            } else {
+                // 桌面端：使用 WhatsApp Web
+                window.open('https://api.whatsapp.com/send?phone=' + phone, '_blank');
+            }
         }
         
         // 切换图片展开/收起
