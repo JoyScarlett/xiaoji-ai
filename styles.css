@@ -47,6 +47,7 @@ body {
     text-decoration: none;
     padding: 0;
     margin: 0 auto 20px;
+    width: 100%;
     border: none;
     pointer-events: none; /* Logo不可点击 */
 }
@@ -66,11 +67,14 @@ body {
 /* 移动端适配 */
 @media (max-width: 767px) {
     .brand-logo-img {
-        max-width: 220px;
+        max-width: 280px;
     }
     
     .brand-logo {
         padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
 
