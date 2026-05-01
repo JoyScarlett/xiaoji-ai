@@ -35,7 +35,7 @@ body {
    标题区
    ============================================ */
 .header-section {
-    padding: 60px 0 40px;
+    padding: 40px 0 40px;
     text-align: center;
 }
 
@@ -72,7 +72,7 @@ body {
         max-width: 350px;
         margin: 0 auto;
         display: block;
-        transform: translate(100px, -30px);
+        transform: translate(100px, 0);
     }
     
     .brand-logo {
@@ -86,7 +86,7 @@ body {
     }
     
     .header-section {
-        padding: 60px 0 40px;
+        padding: 40px 0 40px;
     }
 }
 
