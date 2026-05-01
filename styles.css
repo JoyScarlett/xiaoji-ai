@@ -72,7 +72,7 @@ body {
         max-width: 350px;
         margin: 0 auto;
         display: block;
-        transform: translateX(100px);
+        transform: translate(100px, -30px);
     }
     
     .brand-logo {
